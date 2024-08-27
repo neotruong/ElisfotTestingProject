@@ -106,6 +106,7 @@
 		242998492C7C727800BECC84 /* ElisfotTestingProject */ = {
 			isa = PBXGroup;
 			children = (
+				248B94BB2C7CCE0B001D7FE2 /* Manager */,
 				2429987B2C7C79B000BECC84 /* Scene */,
 				2429987A2C7C72B800BECC84 /* Init */,
 				242998532C7C727A00BECC84 /* Assets.xcassets */,
@@ -135,7 +136,6 @@
 		2429987B2C7C79B000BECC84 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				248B94BB2C7CCE0B001D7FE2 /* Manager */,
 				2429987C2C7C79B400BECC84 /* Home */,
 			);
 			path = Scene;
