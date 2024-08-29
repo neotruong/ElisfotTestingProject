@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomeViewModelDelegated {
     func addNewImage(onFinish: @escaping (() -> Void))
+    func isLoadingAllImage() -> Bool
     func clearCache()
     
     var images: [ImageSection] { get }
@@ -21,6 +22,10 @@ final class HomeViewModel: HomeViewModelDelegated {
     
     init(networkManager: NetworkManager!) {
         self.networkManager = networkManager
+    }
+    
+    func isLoadingAllImage() -> Bool {
+        return networkManager.activeTasks.count == 0
     }
     
     func addNewImage(onFinish: @escaping (() -> Void)){

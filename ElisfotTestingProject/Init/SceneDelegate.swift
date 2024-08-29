@@ -19,16 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.overrideUserInterfaceStyle = .light
         
-        window?.rootViewController = UINavigationController(rootViewController: HomeViewController(viewModel: initViewModel()))
+        window?.rootViewController = UINavigationController(rootViewController: SplashScreenViewController())
         window?.makeKeyAndVisible()
     }
-    
-    func initViewModel() -> HomeViewModel {
-        let networkManger = NetworkManager()
-        return HomeViewModel(networkManager: networkManger)
-    }
-    
-    
+        
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
