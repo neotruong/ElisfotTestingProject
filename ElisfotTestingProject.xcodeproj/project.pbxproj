@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240222BC2C80044E008FD3A2 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240222BB2C80044E008FD3A2 /* Indicator.swift */; };
+		240222BF2C8010BF008FD3A2 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240222BE2C8010BF008FD3A2 /* SplashScreenViewController.xib */; };
+		240222C12C801164008FD3A2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240222C02C801164008FD3A2 /* SplashScreenViewController.swift */; };
 		2429984B2C7C727800BECC84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429984A2C7C727800BECC84 /* AppDelegate.swift */; };
 		2429984D2C7C727800BECC84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429984C2C7C727800BECC84 /* SceneDelegate.swift */; };
 		242998542C7C727A00BECC84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 242998532C7C727A00BECC84 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		240222BB2C80044E008FD3A2 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		240222BE2C8010BF008FD3A2 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		240222C02C801164008FD3A2 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		242998472C7C727800BECC84 /* ElisfotTestingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElisfotTestingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2429984A2C7C727800BECC84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2429984C2C7C727800BECC84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240222BA2C800446008FD3A2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				240222BB2C80044E008FD3A2 /* Indicator.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		240222BD2C8010AE008FD3A2 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				240222BE2C8010BF008FD3A2 /* SplashScreenViewController.xib */,
+				240222C02C801164008FD3A2 /* SplashScreenViewController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
 		2429983E2C7C727800BECC84 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +129,7 @@
 		242998492C7C727800BECC84 /* ElisfotTestingProject */ = {
 			isa = PBXGroup;
 			children = (
+				240222BA2C800446008FD3A2 /* Shared */,
 				248B94BB2C7CCE0B001D7FE2 /* Manager */,
 				2429987B2C7C79B000BECC84 /* Scene */,
 				2429987A2C7C72B800BECC84 /* Init */,
@@ -136,6 +160,7 @@
 		2429987B2C7C79B000BECC84 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				240222BD2C8010AE008FD3A2 /* SplashScreen */,
 				2429987C2C7C79B400BECC84 /* Home */,
 			);
 			path = Scene;
@@ -334,6 +359,7 @@
 			files = (
 				242998542C7C727A00BECC84 /* Assets.xcassets in Resources */,
 				242998572C7C727A00BECC84 /* Base in Resources */,
+				240222BF2C8010BF008FD3A2 /* SplashScreenViewController.xib in Resources */,
 				248B94BA2C7CBCA6001D7FE2 /* SectionCollectionCell.xib in Resources */,
 				242998862C7C874900BECC84 /* CustomCellCollectionViewCell.xib in Resources */,
 				242998802C7C815E00BECC84 /* HomeViewController.xib in Resources */,
@@ -356,6 +382,8 @@
 			files = (
 				2429984B2C7C727800BECC84 /* AppDelegate.swift in Sources */,
 				248B94BF2C7CCFD7001D7FE2 /* CacheManager.swift in Sources */,
+				240222C12C801164008FD3A2 /* SplashScreenViewController.swift in Sources */,
+				240222BC2C80044E008FD3A2 /* Indicator.swift in Sources */,
 				2429988B2C7C970100BECC84 /* Image.swift in Sources */,
 				248B94C22C7CD0B8001D7FE2 /* HomeViewModel.swift in Sources */,
 				2429984D2C7C727800BECC84 /* SceneDelegate.swift in Sources */,

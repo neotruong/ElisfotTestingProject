@@ -44,6 +44,7 @@ class NetworkManager {
                 return
             }
             self.activeTasks[uuid]?.cancel()
+            self.activeTasks.removeValue(forKey: uuid)
             completion(ResponseImage(imageLink: response?.url?.absoluteString ?? "", data: data), error)
         }
         activeTasks[uuid] = task

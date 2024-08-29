@@ -39,6 +39,9 @@ final class HomeViewController: UIViewController {
         
         let reloadButton = UIBarButtonItem(title: "Reload all", style: .done, target: self, action: #selector(reloadButtonTapped))
         
+        addButton.customView?.isExclusiveTouch = true
+        reloadButton.customView?.isExclusiveTouch = true
+        
         navigationItem.leftBarButtonItems = [addButton, reloadButton]
     }
     
@@ -83,16 +86,22 @@ final class HomeViewController: UIViewController {
     }
     
     @objc func addButtonTapped() {
+        UIApplication.shared.showLoading()
         images = addTempImage(currentSection: images)
         viewModel.addNewImage { [weak self] in
-            self?.images = self?.viewModel.images ?? []
-            self?.reloadCollectionView()
+            guard let self = self else { return }
+            if self.viewModel.isLoadingAllImage() {
+                UIApplication.shared.hideLoading()
+            }
+            self.images = self.viewModel.images
+            self.reloadCollectionView()
         }
         
         reloadCollectionView()
     }
     
     @objc func reloadButtonTapped() {
+        UIApplication.shared.showLoading()
         clearCache()
         viewModel.clearCache()
         loopGenerateImages(times: reloadValue)
@@ -107,8 +116,13 @@ final class HomeViewController: UIViewController {
         for _ in 1...times {
             images = addTempImage(currentSection: images)
             viewModel.addNewImage { [weak self] in
-                self?.images = self?.viewModel.images ?? []
-                self?.reloadCollectionView()
+                guard let self = self else { return }
+                self.images = self.viewModel.images
+                self.reloadCollectionView()
+                
+                if viewModel.isLoadingAllImage() {
+                    UIApplication.shared.hideLoading()
+                }
             }
         }
     }
